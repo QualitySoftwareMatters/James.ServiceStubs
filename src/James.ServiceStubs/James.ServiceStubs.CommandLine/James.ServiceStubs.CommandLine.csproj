@@ -89,7 +89,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\James.ServiceStubs\James.ServiceStubs.csproj">
-      <Project>{5D4ACDF7-69C7-41F7-B893-E14D026B45AF}</Project>
+      <Project>{5d4acdf7-69c7-41f7-b893-e14d026b45af}</Project>
       <Name>James.ServiceStubs</Name>
     </ProjectReference>
   </ItemGroup>
