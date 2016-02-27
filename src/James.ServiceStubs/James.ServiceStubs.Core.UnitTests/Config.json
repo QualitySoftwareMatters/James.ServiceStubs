@@ -1,0 +1,14 @@
+﻿[
+  {
+    "type": "Get",
+    "template": "/api/System",
+    "path": "System.template",
+    "status": "Ok"
+  },
+  {
+    "type": "Get",
+    "template": "/notfound/api/System",
+    "path": "System.template",
+    "status": "NotFound"
+  }
+]

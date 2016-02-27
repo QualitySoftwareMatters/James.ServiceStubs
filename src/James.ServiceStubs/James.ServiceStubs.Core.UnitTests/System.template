@@ -1,0 +1,4 @@
+﻿{
+    "serverName": "@Environment.MachineName",
+    "serverTimeStamp":  "2012-01-01T11:24:15-05:00"
+}

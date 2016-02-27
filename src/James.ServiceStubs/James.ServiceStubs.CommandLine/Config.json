@@ -1,0 +1,53 @@
+﻿[
+  {
+    "type": "Get",
+    "template": "/api/System",
+    "path": "System.template",
+    "status": "Ok"
+  },
+  {
+    "type": "Get",
+    "template": "/api/Customers/{id}",
+    "path": "Customer{id}.template"
+  },
+  {
+    "type": "Post",
+    "template": "/api/Employees",
+    "path": "EmployeesPost{Body.id}.template",
+    "delayInMilliseconds": [ 1000, 2, 3 ],
+    "delayStrategy": "Random"
+  },
+  {
+    "type": "Post",
+    "template": "/api/TransUnion",
+    "path": "TransunionPost{Form.Id}.template",
+    "delayInMilliseconds": [ 1000, 2000, 3000 ]
+  },
+  {
+    "type": "Put",
+    "template": "/api/Employees/{id}",
+    "path": "EmployeesPostBadRequest.template",
+    "status": "BadRequest"
+  },
+  {
+    "type": "Get",
+    "template": "/api/Benefits",
+    "path": "EligibilityBenefits.template",
+    "status": "OK",
+    "delayInMilliseconds": [ 1000, 2000, 3000 ],
+    "delayStrategy": "random"
+  },
+  {
+    "type": "Get",
+    "template": "/api/PayerDateRange",
+    "path": "EligibilityPayerDateRange.template",
+    "status": "OK",
+    "delayInMilliseconds": 1000,
+    "delayStrategy": "RoundRobin"
+  }
+]
+
+//number of threads
+//xml
+//delay functionality
+//set port - can 80 work on IIS server?

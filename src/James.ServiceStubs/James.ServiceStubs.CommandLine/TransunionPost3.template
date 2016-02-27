@@ -1,0 +1,6 @@
+﻿{
+  "id": @Model.Form.Id,
+  "firstName": "@Model.Form.FirstName",
+  "lastName": "@Model.Form.LastName",
+  "address": "@Model.Query.Address"
+}

@@ -1,0 +1,4 @@
+﻿{
+  "host": "@Model.Headers.Host",
+  "serverName": "RCM41VHESTSOA01.npce.com"
+}
