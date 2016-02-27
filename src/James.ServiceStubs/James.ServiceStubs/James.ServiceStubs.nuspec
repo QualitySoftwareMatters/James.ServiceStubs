@@ -8,7 +8,7 @@
     <owners>$author$</owners>
     <licenseUrl>https://github.com/QualitySoftwareMatters/James.ServiceStubs/blob/master/LICENSE</licenseUrl>
     <projectUrl>https://github.com/QualitySoftwareMatters/James.ServiceStubs</projectUrl>
-    <iconUrl>https://avatars2.githubusercontent.com/u/12646135?v=3&s=200</iconUrl>
+    <iconUrl>https://avatars2.githubusercontent.com/u/12646135?v=3</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>$description$</description>
     <releaseNotes>Initial release of utility.</releaseNotes>
