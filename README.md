@@ -8,6 +8,7 @@ James.ServiceStubs is a configurable template-based HTTP service stub host/gener
 
 * Service Inaccessibility
 * Sad Case Scenarios
+* Performance Testing Isolation
 
 ### Service Inaccessibility
 
@@ -21,6 +22,10 @@ In other cases, you might be working with a 3rd party that does not provide a pr
 
 Another challenge with testing your HTTP client code is validating how your code will behave in the case of bad responses such as a 400-BadRequest or a 500-InternalServerError.  These kinds of errors are sometimes hard to create manually or by sending the right data.  They can be intermittent, and yet, you need to make sure that your code will be reliable in these situations.
 
+### Performance Testing Isolation
+
+In performance/load testing scenarios, you might need to ensure that the response from a given service does not add any response time to your testing, so that you can better understand the performance of the existing HTTP client code and whatever else it does.  If you are tied to real services, it is not possible to control this variable.
+
 Whatever the reason, James.ServiceStubs will allow you to host that service either in-process using self hosting by installing the Nuget package to your project or by downloading the James.ServiceStubs.zip from [here]() and running it from the command line.
 
 ## Getting Started - Automated Integration Tests ##
@@ -31,7 +36,7 @@ To get started, you will need to install the Nuget package to your current integ
 PM> install-package James.ServiceStubs
 ```
 
-This will not only install the various dependent libraries that James.ServiceStubs requires, but it will also set your project up with the routing configuration and a sample template file.  Below is what your project sturucture will look like after the install:
+This will not only install the various dependent libraries that James.ServiceStubs requires, but it will also set your project up with the routing configuration and a sample template file.  Below is what your project sturcture will look like after the install:
 
 ```
 Project
@@ -68,3 +73,7 @@ You will notice that the template is going to return the {id} that was sent in t
 The framework will also allow for delaying the response for a configurable milliseconds to aid in simulation for performance testing.  In this case, the framework will return a response in 1000 ms the first time.  Because the delayType is 'RoundRobin', the framework will return the next request in 2000 ms and the 3rd in 3000 ms.  The very next request will be returned in 1000 ms and the pattern will continue on as long as the host is alive.
 
 If you do not specify this value or if you set the value to 0, it will not add any time to the response, which may be more desirable during automated integration tests.
+
+## Route Configuration
+
+TODO
