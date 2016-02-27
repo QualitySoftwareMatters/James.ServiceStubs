@@ -12,7 +12,7 @@ namespace James.ServiceStubs.Core
          
         public RouteProvider()
         {
-            _routeConfigPath = Path.Combine(Environment.CurrentDirectory, "Config.json");
+            _routeConfigPath = Path.Combine(Environment.CurrentDirectory, "routes.json");
         }
 
         private List<Route> _cachedRoutes = null;

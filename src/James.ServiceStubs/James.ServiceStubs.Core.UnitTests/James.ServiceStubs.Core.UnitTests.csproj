@@ -70,7 +70,7 @@
     <Compile Include="Sample\SystemGatewayTests.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Config.json">
+    <Content Include="routes.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="System.template">
