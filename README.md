@@ -70,10 +70,42 @@ The default endpoint that you will host on would be http://localhost:1234, so if
 
 You will notice that the template is going to return the {id} that was sent in the url based on the tokenization found in the configuration of the route.
 
-The framework will also allow for delaying the response for a configurable milliseconds to aid in simulation for performance testing.  In this case, the framework will return a response in 1000 ms the first time.  Because the delayType is 'RoundRobin', the framework will return the next request in 2000 ms and the 3rd in 3000 ms.  The very next request will be returned in 1000 ms and the pattern will continue on as long as the host is alive.
+The next step is to start up the ServiceStubsHost.
 
-If you do not specify this value or if you set the value to 0, it will not add any time to the response, which may be more desirable during automated integration tests.
+```csharp
+using (var host = new ServiceStubsHost("http://localhost:1234"))
+{
+  host.Start();
+}
+```
+
+Once you have the host started, you can open your browser and go to the configured route and see the response.
 
 ## Route Configuration
 
-TODO
+The routes.json file holds all of the configuration for the routes that you want to support for your testing scenarios.  This file is set up as an array, so you can hold as many routes as you would like.
+
+```json
+[
+  { //route },
+  { //route },
+  { //route }
+]
+```
+
+For each route, there are a number of properties that you can configure.  If the property does not exist, the framework will use the default value.
+
+| Property | Description | Default | Comments |
+| -------- | ----------- | ------- | -------- |
+| type     | The various request types:  Get, Post, Put, Delete | Get | |
+| template | The url template for matching requests to responses | http://localhost:[port]/ | |
+| path     | The path to the template that should be used for the response | n/a | |
+| delayInMilliseconds | The delay that the framework should wait for returning a response | 0 | You can specify 1 without the array syntax or multiple as an array when specifying this value. | 
+| delayStrategy | The strategy that the framework should use for delaying the response | RoundRobin | |
+| status | The status code description that should be returned with the response | OK | |
+
+### Delays
+
+The framework allows for delaying the response for a configurable milliseconds to aid in simulation for performance testing.  In the sample provided earlier (```json "delayInMilliseconds": [ 1000, 2000, 3000 ]```), the framework will return the first response in 1000 ms.  Because the delayType is 'RoundRobin', the framework will return the next request in 2000 ms and the 3rd in 3000 ms.  The very next request will be returned in 1000 ms and the pattern will continue on as long as the host is alive.
+
+The other strategy for delays is Random.  In that case, the framework will randomly choose from the values that have been provided in the delayInMilliseconds and wait accordingly every time a request comes in.
