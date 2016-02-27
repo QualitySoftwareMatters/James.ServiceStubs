@@ -7,7 +7,8 @@ namespace James.ServiceStubs.Core.Rz
 {
     public class MassiveExpando : DynamicObject, IDictionary<string, object>
     {
-        private readonly IDictionary<string, object> _dictionary = new Dictionary<string, object>(StringComparer.InvariantCultureIgnoreCase);
+        private readonly IDictionary<string, object> _dictionary =
+            new Dictionary<string, object>(StringComparer.InvariantCultureIgnoreCase);
 
         public void Add(KeyValuePair<string, object> item)
         {

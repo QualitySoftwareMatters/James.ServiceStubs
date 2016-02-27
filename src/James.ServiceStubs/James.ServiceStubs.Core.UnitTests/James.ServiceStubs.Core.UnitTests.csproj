@@ -68,6 +68,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sample\SystemGateway.cs" />
     <Compile Include="Sample\SystemGatewayTests.cs" />
+    <Compile Include="TokenPokerTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="routes.json">
