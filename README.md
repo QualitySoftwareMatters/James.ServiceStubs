@@ -109,3 +109,22 @@ For each route, there are a number of properties that you can configure.  If the
 The framework allows for delaying the response for a configurable milliseconds to aid in simulation for performance testing.  In the sample provided earlier (```json "delayInMilliseconds": [ 1000, 2000, 3000 ]```), the framework will return the first response in 1000 ms.  Because the delayType is 'RoundRobin', the framework will return the next request in 2000 ms and the 3rd in 3000 ms.  The very next request will be returned in 1000 ms and the pattern will continue on as long as the host is alive.
 
 The other strategy for delays is Random.  In that case, the framework will randomly choose from the values that have been provided in the delayInMilliseconds and wait accordingly every time a request comes in.
+
+### Templates
+
+If you want to add templates to the system, you can do that by adding them anywhere relative to the project.  As suggested by the installation, it would make sense to store them in the Templates folder off of the root of your project.  When you reference the path in the routes.json file, they should be relative to the root.
+
+You will also need to make sure to set the Copy To Output to true for the given file.  You can do this by right-clicking on the file and selecting Properties and filling in this value in the Properties pane.
+
+When rendering templates, all of the data contained within the request will be made available to the template under the @Model keyword.  This includes:
+
+| Item | Description | Syntax | Request Example |
+| ---- | ----------- | ------ | --------------- |
+| url parameters | Come from tokens that are place in the url template | {@Model.id} | /api/Samples/{id} |
+| querystring parameters | Come from the querystring | {@Model.query.id} | /api/Customers?id=1 |
+| headers | Come from the headers collection | {@Model.headers.contenttype | Content-Type: application/json |
+| form parameters | Come from the body of a url encoded form that is posted | {@Model.form.id} | (body) id=1&firstName=Todd |
+| body | Come from the body of the request.  Framework supports nested properties. | {@Model.Body.address.city} | (body) { "Address" : { "City" : "Frisco" }} |
+
+* headers - {@Model.headers.id}
+* 
