@@ -3,7 +3,7 @@ using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
 
-namespace James.ServiceStubs.Core.UnitTests.Sample
+namespace James.ServiceStubs.Sample
 {
     public class SystemGateway
     {

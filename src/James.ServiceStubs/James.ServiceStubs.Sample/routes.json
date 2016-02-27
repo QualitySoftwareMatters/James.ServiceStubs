@@ -1,0 +1,22 @@
+﻿[
+  {
+    "type": "Get",
+    "template": "/api/Sample/{id}",
+    "path": "Templates/Sample.template",
+    "delayInMilliseconds": [ 1000, 2000, 3000 ],
+    "delayStrategy": "RoundRobin",
+    "status": "OK"
+  },
+    {
+    "type": "Get",
+    "template": "/api/System",
+    "path": "Templates/System.template",
+    "status": "Ok"
+  },
+  {
+    "type": "Get",
+    "template": "/notfound/api/System",
+    "path": "Templates/System.template",
+    "status": "NotFound"
+  }
+]

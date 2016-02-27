@@ -4,7 +4,7 @@ using FluentAssertions;
 
 using NUnit.Framework;
 
-namespace James.ServiceStubs.Core.UnitTests.Sample
+namespace James.ServiceStubs.Sample
 {
     [TestFixture]
     public class SystemGatewayTests

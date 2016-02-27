@@ -11,13 +11,26 @@
     <iconUrl>https://avatars2.githubusercontent.com/u/12646135?v=3</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>$description$</description>
-    <releaseNotes>Initial release of utility.</releaseNotes>
+    <releaseNotes>
+      0.4.8 Additional configuration.
+      0.4.7 Additional configuration.
+      0.4.6 Additional configuration.
+      0.4.5 Additional configuration.
+      0.4.4 Additional configuration.
+      0.4.3 Additional configuration.
+      0.4.2 Additional configuration.
+      0.4.1 Added an install script that will modify the content to be copy to output.
+      0.4.0 Fixing an issue with making the deployed files content that gets deployed on build.
+    </releaseNotes>
     <copyright>Copyright 2016</copyright>
     <tags>http service test testing stubs mocks fake</tags>
     <dependencies>
-      <dependency id="Nancy.Hosting.Self" version="[1,2)"/>
-      <dependency id="Newtonsoft.Json" version="[8,9)"/>
-      <dependency id="RazorEngine" version="[3,4)"/>
+      <dependency id="Nancy.Hosting.Self" version="1.4.1"/>
+      <dependency id="Newtonsoft.Json" version="8.0.1"/>
+      <dependency id="RazorEngine" version="3.7.7"/>
     </dependencies>
   </metadata>
+  <files>
+    <file src="Tools\install.ps1" target="Tools"/>
+  </files>
 </package>

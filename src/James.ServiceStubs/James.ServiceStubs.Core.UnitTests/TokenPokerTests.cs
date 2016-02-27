@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 
 using FluentAssertions;
-using Nancy;
 
 using NUnit.Framework;
 
