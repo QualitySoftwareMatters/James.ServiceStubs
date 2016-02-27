@@ -125,6 +125,3 @@ When rendering templates, all of the data contained within the request will be m
 | headers | Come from the headers collection | {@Model.headers.contenttype | Content-Type: application/json |
 | form parameters | Come from the body of a url encoded form that is posted | {@Model.form.id} | (body) id=1&firstName=Todd |
 | body | Come from the body of the request.  Framework supports nested properties. | {@Model.Body.address.city} | (body) { "Address" : { "City" : "Frisco" }} |
-
-* headers - {@Model.headers.id}
-* 
