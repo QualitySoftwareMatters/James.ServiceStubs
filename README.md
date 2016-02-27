@@ -79,7 +79,7 @@ using (var host = new ServiceStubsHost("http://localhost:1234"))
 }
 ```
 
-Once you have the host started, you can open your browser and go to the configured route and see the response.
+Once you have the host started, you can open your browser and go to the configured route (```http://localhost:1234/api/Sample/1```) and see the response.
 
 ## Route Configuration
 
