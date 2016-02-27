@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
 
-using James.ServiceStubs.Core.Rz;
+using James.ServiceStubs.Razor;
 
-namespace James.ServiceStubs.Core
+namespace James.ServiceStubs
 {
     public class TokenPoker : ITokenPoker
     {

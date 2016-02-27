@@ -80,7 +80,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <None Include="packages.config" />
-    <Content Include="System.template">
+    <Content Include="Templates\System.template">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="TransunionPost3.template">
@@ -88,9 +88,9 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\James.ServiceStubs.Core\James.ServiceStubs.Core.csproj">
-      <Project>{83693ef4-122c-4f50-9d5e-2fc9fb42f984}</Project>
-      <Name>James.ServiceStubs.Core</Name>
+    <ProjectReference Include="..\James.ServiceStubs\James.ServiceStubs.csproj">
+      <Project>{5D4ACDF7-69C7-41F7-B893-E14D026B45AF}</Project>
+      <Name>James.ServiceStubs</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 
-namespace James.ServiceStubs.Core
+namespace James.ServiceStubs
 {
     public class TemplateProvider : ITemplateProvider
     {

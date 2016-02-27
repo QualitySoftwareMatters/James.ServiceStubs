@@ -5,7 +5,6 @@ using System.Security.Permissions;
 using System.Security.Policy;
 
 using James.ServiceStubs.CommandLine.Mono.Options;
-using James.ServiceStubs.Core;
 
 namespace James.ServiceStubs.CommandLine
 {

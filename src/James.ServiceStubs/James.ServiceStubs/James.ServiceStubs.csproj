@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{83693EF4-122C-4F50-9D5E-2FC9FB42F984}</ProjectGuid>
+    <ProjectGuid>{5D4ACDF7-69C7-41F7-B893-E14D026B45AF}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>James.ServiceStubs.Core</RootNamespace>
-    <AssemblyName>James.ServiceStubs.Core</AssemblyName>
+    <RootNamespace>James.ServiceStubs</RootNamespace>
+    <AssemblyName>James.ServiceStubs</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -73,19 +73,24 @@
     <Compile Include="RequestType.cs" />
     <Compile Include="Route.cs" />
     <Compile Include="RouteProvider.cs" />
-    <Compile Include="Rz\IDictionaryExtensions.cs" />
-    <Compile Include="Rz\MassiveExpando.cs" />
-    <Compile Include="Rz\RazorTemplateEngine.cs" />
-    <Compile Include="Rz\TemplateKey.cs" />
+    <Compile Include="Razor\IDictionaryExtensions.cs" />
+    <Compile Include="Razor\MassiveExpando.cs" />
+    <Compile Include="Razor\RazorTemplateEngine.cs" />
+    <Compile Include="Razor\TemplateKey.cs" />
     <Compile Include="ServiceStubsBootstrapper.cs" />
     <Compile Include="ServiceStubsHost.cs" />
     <Compile Include="TemplateProvider.cs" />
     <Compile Include="TokenPoker.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config">
-      <SubType>Designer</SubType>
-    </None>
+    <Content Include="Content\routes.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Templates\Sample.template">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="James.ServiceStubs.nuspec" />
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

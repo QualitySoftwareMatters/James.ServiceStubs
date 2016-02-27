@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
-namespace James.ServiceStubs.Core
+namespace James.ServiceStubs
 {
     public class ObjectDictionaryConverter : CustomCreationConverter<IDictionary<string, object>>
     {

@@ -7,7 +7,7 @@ using Nancy;
 
 using Newtonsoft.Json;
 
-namespace James.ServiceStubs.Core
+namespace James.ServiceStubs
 {
     public static class NancyContextExtensions
     {

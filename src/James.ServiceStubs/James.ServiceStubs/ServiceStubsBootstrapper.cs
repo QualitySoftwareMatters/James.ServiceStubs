@@ -1,14 +1,14 @@
 using System;
 using System.Collections.Generic;
 
-using James.ServiceStubs.Core.Rz;
+using James.ServiceStubs.Razor;
 
 using Nancy;
 using Nancy.Bootstrapper;
 using Nancy.ErrorHandling;
 using Nancy.TinyIoc;
 
-namespace James.ServiceStubs.Core
+namespace James.ServiceStubs
 {
     public class ServiceStubsBootstrapper : DefaultNancyBootstrapper
     {

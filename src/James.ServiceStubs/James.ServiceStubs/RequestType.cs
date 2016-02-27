@@ -1,4 +1,4 @@
-﻿namespace James.ServiceStubs.Core
+﻿namespace James.ServiceStubs
 {
     public enum RequestType : int
     {

@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>$author$</authors>
+    <owners>$author$</owners>
+    <licenseUrl>https://github.com/QualitySoftwareMatters/James.ServiceStubs/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/QualitySoftwareMatters/James.ServiceStubs</projectUrl>
+    <iconUrl>https://avatars2.githubusercontent.com/u/12646135?v=3&s=200</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>$description$</description>
+    <releaseNotes>Initial release of utility.</releaseNotes>
+    <copyright>Copyright 2016</copyright>
+    <tags>http service test testing stubs mocks fake</tags>
+    <dependencies>
+      <dependency id="Nancy.Hosting.Self" version="[1,2)"/>
+      <dependency id="Newtonsoft.Json" version="[8,9)"/>
+      <dependency id="RazorEngine" version="[3,4)"/>
+    </dependencies>
+  </metadata>
+</package>

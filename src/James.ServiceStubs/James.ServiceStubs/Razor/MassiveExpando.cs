@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Dynamic;
 
-namespace James.ServiceStubs.Core.Rz
+namespace James.ServiceStubs.Razor
 {
     public class MassiveExpando : DynamicObject, IDictionary<string, object>
     {

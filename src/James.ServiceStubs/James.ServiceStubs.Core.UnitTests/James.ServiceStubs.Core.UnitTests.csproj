@@ -81,9 +81,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\James.ServiceStubs.Core\James.ServiceStubs.Core.csproj">
-      <Project>{83693EF4-122C-4F50-9D5E-2FC9FB42F984}</Project>
-      <Name>James.ServiceStubs.Core</Name>
+    <ProjectReference Include="..\James.ServiceStubs\James.ServiceStubs.csproj">
+      <Project>{5D4ACDF7-69C7-41F7-B893-E14D026B45AF}</Project>
+      <Name>James.ServiceStubs</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

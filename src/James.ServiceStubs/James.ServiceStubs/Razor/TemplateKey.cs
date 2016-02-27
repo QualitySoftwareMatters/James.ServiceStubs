@@ -1,6 +1,6 @@
 ﻿using RazorEngine.Templating;
 
-namespace James.ServiceStubs.Core.Rz
+namespace James.ServiceStubs.Razor
 {
     public class TemplateKey : ITemplateKey
     {

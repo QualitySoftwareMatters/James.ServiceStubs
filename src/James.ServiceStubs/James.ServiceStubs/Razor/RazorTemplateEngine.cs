@@ -3,7 +3,7 @@
 using RazorEngine;
 using RazorEngine.Templating;
 
-namespace James.ServiceStubs.Core.Rz
+namespace James.ServiceStubs.Razor
 {
     //NOTE:  https://github.com/Antaris/RazorEngine#temporary-files
     public class RazorTemplateEngine : ITemplateEngine

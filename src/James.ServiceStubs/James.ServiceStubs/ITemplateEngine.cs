@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace James.ServiceStubs.Core
+namespace James.ServiceStubs
 {
     public interface ITemplateEngine
     {

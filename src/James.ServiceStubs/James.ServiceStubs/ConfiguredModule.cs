@@ -5,7 +5,7 @@ using System.Threading;
 
 using Nancy;
 
-namespace James.ServiceStubs.Core
+namespace James.ServiceStubs
 {
     public class ConfiguredModule : NancyModule
     {

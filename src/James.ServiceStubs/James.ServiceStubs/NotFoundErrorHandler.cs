@@ -4,7 +4,7 @@ using Nancy;
 using Nancy.ErrorHandling;
 using Nancy.Responses.Negotiation;
 
-namespace James.ServiceStubs.Core
+namespace James.ServiceStubs
 {
     public class NotFoundErrorHandler : IStatusCodeHandler
     {

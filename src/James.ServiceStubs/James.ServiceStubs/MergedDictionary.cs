@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace James.ServiceStubs.Core
+namespace James.ServiceStubs
 {
     public class MergedDictionary<TValue> : Dictionary<string, TValue>
     {

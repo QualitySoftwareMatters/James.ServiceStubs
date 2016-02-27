@@ -3,7 +3,7 @@ using System;
 using Nancy.Bootstrapper;
 using Nancy.Hosting.Self;
 
-namespace James.ServiceStubs.Core
+namespace James.ServiceStubs
 {
     public class ServiceStubsHost : NancyHost
     {

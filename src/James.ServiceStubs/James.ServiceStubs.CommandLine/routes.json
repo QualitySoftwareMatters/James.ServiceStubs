@@ -2,7 +2,7 @@
   {
     "type": "Get",
     "template": "/api/System",
-    "path": "System.template",
+    "path": "Templates/System.template",
     "status": "Ok"
   },
   {

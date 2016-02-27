@@ -2,9 +2,6 @@
 using System.Collections.Generic;
 
 using FluentAssertions;
-
-using James.ServiceStubs.Core.Rz;
-
 using Nancy;
 
 using NUnit.Framework;

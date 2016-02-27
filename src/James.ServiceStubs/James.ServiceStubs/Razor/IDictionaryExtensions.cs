@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace James.ServiceStubs.Core.Rz
+namespace James.ServiceStubs.Razor
 {
     public static class IDictionaryExtensions
     {
