@@ -1,2 +1,2 @@
 # James.ServiceStubs
-A configurable template-based service stub host/generator. 
+A configurable template-based HTTP service stub host/generator. 
