@@ -64,7 +64,7 @@ The default endpoint that you will host on would be http://localhost:1234, so if
 
 ```json
 {
-  "message": "Hello, world.  This is sample {id}."
+  "message": "Hello, world.  This is sample @Model.Id."
 }
 ```
 
@@ -120,8 +120,8 @@ When rendering templates, all of the data contained within the request will be m
 
 | Item | Description | Syntax | Request Example |
 | ---- | ----------- | ------ | --------------- |
-| url parameters | Come from tokens that are place in the url template | {@Model.id} | /api/Samples/{id} |
-| querystring parameters | Come from the querystring | {@Model.query.id} | /api/Customers?id=1 |
-| headers | Come from the headers collection | {@Model.headers.contenttype | Content-Type: application/json |
-| form parameters | Come from the body of a url encoded form that is posted | {@Model.form.id} | (body) id=1&firstName=Todd |
-| body | Come from the body of the request.  Framework supports nested properties. | {@Model.Body.address.city} | (body) { "Address" : { "City" : "Frisco" }} |
+| url parameters | Come from tokens that are place in the url template | @Model.id | /api/Samples/{id} |
+| querystring parameters | Come from the querystring | @Model.query.id | /api/Customers?id=1 |
+| headers | Come from the headers collection | @Model.headers.contenttype | Content-Type: application/json |
+| form parameters | Come from the body of a url encoded form that is posted | @Model.form.id | (body) id=1&firstName=Todd |
+| body | Come from the body of the request.  Framework supports nested properties. | @Model.Body.address.city | (body) { "Address" : { "City" : "Frisco" }} |
