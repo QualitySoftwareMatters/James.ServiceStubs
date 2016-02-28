@@ -13,8 +13,8 @@ namespace James.ServiceStubs
         private static readonly object PadLock = new object();
 
         public RequestType Type { get; set; }
-        public string Template { get; set; }
         public string Path { get; set; }
+        public string Template { get; set; }
 
         [JsonConverter(typeof (SingleOrArrayConverter<int>))]
         public List<int> DelayInMilliseconds { get; set; } = new List<int>{ 0 };

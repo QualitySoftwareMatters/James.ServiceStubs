@@ -1,46 +1,46 @@
 ﻿[
   {
     "type": "Get",
-    "template": "/api/System",
-    "path": "Templates/System.template",
+    "path": "/api/System",
+    "template": "Templates/System.template",
     "status": "Ok"
   },
   {
     "type": "Get",
-    "template": "/api/Customers/{id}",
-    "path": "Templates/Customer{id}.template"
+    "path": "/api/Customers/{id}",
+    "template": "Templates/Customer{id}.template"
   },
   {
     "type": "Post",
-    "template": "/api/Employees",
-    "path": "Templates/EmployeesPost{Body.id}.template",
+    "path": "/api/Employees",
+    "template": "Templates/EmployeesPost{Body.id}.template",
     "delayInMilliseconds": [ 1000, 2, 3 ],
     "delayStrategy": "Random"
   },
   {
     "delayInMilliseconds": [ 1000, 2000, 3000 ],
-    "path": "TransunionPost{Form.Id}.template",
-    "template": "Templates//api/TransUnion",
+    "path": "/api/TransUnion",
+    "template": "Templates/TransunionPost{Form.Id}.template",
     "type": "Post"
   },
   {
     "type": "Put",
-    "template": "/api/Employees/{id}",
-    "path": "Templates/EmployeesPostBadRequest.template",
+    "path": "/api/Employees/{id}",
+    "template": "Templates/EmployeesPostBadRequest.template",
     "status": "BadRequest"
   },
   {
     "type": "Get",
-    "template": "/api/Benefits",
-    "path": "Templates/EligibilityBenefits.template",
+    "path": "/api/Benefits",
+    "template": "Templates/EligibilityBenefits.template",
     "status": "OK",
     "delayInMilliseconds": [ 1000, 2000, 3000 ],
     "delayStrategy": "random"
   },
   {
     "type": "Get",
-    "template": "/api/PayerDateRange",
-    "path": "Templates/EligibilityPayerDateRange.template",
+    "path": "/api/PayerDateRange",
+    "template": "Templates/EligibilityPayerDateRange.template",
     "status": "OK",
     "delayInMilliseconds": 1000,
     "delayStrategy": "RoundRobin"

@@ -52,7 +52,7 @@ namespace James.ServiceStubs
 
                 if (builder != null)
                 {
-                    builder[route.Template] = _ =>
+                    builder[route.Path] = _ =>
                     {
                         Func<Response> function = () => GetResponse(route, Context);
                         return ExecuteWithDelay(function, route.CurrentDelayInMilliseconds);
@@ -71,7 +71,7 @@ namespace James.ServiceStubs
                 ? "application/json"
                 : contentType.Item1;
 
-            Response response = _engine.Parse(route.Path, Context.GetParameters());
+            Response response = _engine.Parse(route.Template, Context.GetParameters());
             response
                 .WithContentType($"{contentTypeString}")
                 .WithStatusCode(route.Status);
