@@ -82,6 +82,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="packages.config" />
+    <Content Include="Templates\Sample.template">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="Templates\System.template">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
