@@ -5,8 +5,6 @@ VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "James.ServiceStubs.CommandLine", "James.ServiceStubs.CommandLine\James.ServiceStubs.CommandLine.csproj", "{8B64C0E1-38EC-4E37-B23F-83F77E816C3F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "James.ServiceStubs.Core.UnitTests", "James.ServiceStubs.Core.UnitTests\James.ServiceStubs.Core.UnitTests.csproj", "{25ADB418-B17B-4CA7-A0A2-875386761EAE}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "James.ServiceStubs", "James.ServiceStubs\James.ServiceStubs.csproj", "{5D4ACDF7-69C7-41F7-B893-E14D026B45AF}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{49B179ED-55B6-44D1-A96C-D4A6CC54CCEC}"
@@ -15,6 +13,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "James.ServiceStubs.Sample", "James.ServiceStubs.Sample\James.ServiceStubs.Sample.csproj", "{EBDCAD0C-F650-4B29-BAA9-111087B0B553}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "James.ServiceStubs.UnitTests", "James.ServiceStubs.UnitTests\James.ServiceStubs.UnitTests.csproj", "{08B9092D-7D1B-4346-AFCB-B4DB5A01EDC1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -26,10 +26,6 @@ Global
 		{8B64C0E1-38EC-4E37-B23F-83F77E816C3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8B64C0E1-38EC-4E37-B23F-83F77E816C3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8B64C0E1-38EC-4E37-B23F-83F77E816C3F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{25ADB418-B17B-4CA7-A0A2-875386761EAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{25ADB418-B17B-4CA7-A0A2-875386761EAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{25ADB418-B17B-4CA7-A0A2-875386761EAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{25ADB418-B17B-4CA7-A0A2-875386761EAE}.Release|Any CPU.Build.0 = Release|Any CPU
 		{5D4ACDF7-69C7-41F7-B893-E14D026B45AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{5D4ACDF7-69C7-41F7-B893-E14D026B45AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5D4ACDF7-69C7-41F7-B893-E14D026B45AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -38,6 +34,10 @@ Global
 		{EBDCAD0C-F650-4B29-BAA9-111087B0B553}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EBDCAD0C-F650-4B29-BAA9-111087B0B553}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EBDCAD0C-F650-4B29-BAA9-111087B0B553}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08B9092D-7D1B-4346-AFCB-B4DB5A01EDC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08B9092D-7D1B-4346-AFCB-B4DB5A01EDC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08B9092D-7D1B-4346-AFCB-B4DB5A01EDC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08B9092D-7D1B-4346-AFCB-B4DB5A01EDC1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
