@@ -20,38 +20,43 @@ namespace James.ServiceStubs
 
             foreach (var route in routes)
             {
+                RouteBuilder builder;
+
                 switch (route.Type)
                 {
                     case RequestType.Get:
-                        Get[route.Template] = _ =>
-                        {   
-                            Func<Response> function = () => GetResponse(route, Context);
-                            return ExecuteWithDelay(function, route.CurrentDelayInMilliseconds);
-                        };
+                        builder = Get;
                         break;
                     case RequestType.Post:
-                        Post[route.Template] = _ =>
-                        {
-                            Func<Response> function = () => GetResponse(route, Context);
-                            return ExecuteWithDelay(function, route.CurrentDelayInMilliseconds);
-                        };
+                        builder = Post;
                         break;
                     case RequestType.Put:
-                        Put[route.Template] = _ =>
-                        {
-                            Func<Response> function = () => GetResponse(route, Context);
-                            return ExecuteWithDelay(function, route.CurrentDelayInMilliseconds);
-                        };
+                        builder = Put;
                         break;
                     case RequestType.Delete:
-                        Put[route.Template] = _ =>
-                        {
-                            Func<Response> function = () => GetResponse(route, Context);
-                            return ExecuteWithDelay(function, route.CurrentDelayInMilliseconds);
-                        };
+                        builder = Delete;
+                        break;
+                    case RequestType.Head:
+                        builder = Head;
+                        break;
+                    case RequestType.Options:
+                        builder = Options;
+                        break;
+                    case RequestType.Patch:
+                        builder = Patch;
                         break;
                     default:
+                        builder = null;
                         break;
+                }
+
+                if (builder != null)
+                {
+                    builder[route.Template] = _ =>
+                    {
+                        Func<Response> function = () => GetResponse(route, Context);
+                        return ExecuteWithDelay(function, route.CurrentDelayInMilliseconds);
+                    };
                 }
             }
         }

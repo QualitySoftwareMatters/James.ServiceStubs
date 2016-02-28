@@ -8,31 +8,31 @@
   {
     "type": "Get",
     "template": "/api/Customers/{id}",
-    "path": "Customer{id}.template"
+    "path": "Templates/Customer{id}.template"
   },
   {
     "type": "Post",
     "template": "/api/Employees",
-    "path": "EmployeesPost{Body.id}.template",
+    "path": "Templates/EmployeesPost{Body.id}.template",
     "delayInMilliseconds": [ 1000, 2, 3 ],
     "delayStrategy": "Random"
   },
   {
     "delayInMilliseconds": [ 1000, 2000, 3000 ],
     "path": "TransunionPost{Form.Id}.template",
-    "template": "/api/TransUnion",
+    "template": "Templates//api/TransUnion",
     "type": "Post"
   },
   {
     "type": "Put",
     "template": "/api/Employees/{id}",
-    "path": "EmployeesPostBadRequest.template",
+    "path": "Templates/EmployeesPostBadRequest.template",
     "status": "BadRequest"
   },
   {
     "type": "Get",
     "template": "/api/Benefits",
-    "path": "EligibilityBenefits.template",
+    "path": "Templates/EligibilityBenefits.template",
     "status": "OK",
     "delayInMilliseconds": [ 1000, 2000, 3000 ],
     "delayStrategy": "random"
@@ -40,7 +40,7 @@
   {
     "type": "Get",
     "template": "/api/PayerDateRange",
-    "path": "EligibilityPayerDateRange.template",
+    "path": "Templates/EligibilityPayerDateRange.template",
     "status": "OK",
     "delayInMilliseconds": 1000,
     "delayStrategy": "RoundRobin"

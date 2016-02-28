@@ -63,29 +63,31 @@
     <Content Include="routes.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Customer1.template">
+    <None Include="Templates\Customer1.template">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Customer2.template">
+    </None>
+    <None Include="Templates\Customer2.template">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <None Include="EligibilityBenefits.template" />
-    <Content Include="EligibilityPayerDateRange.template">
+    </None>
+    <None Include="Templates\EligibilityBenefits.template">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="EmployeesPost2.template">
+    </None>
+    <None Include="Templates\EligibilityPayerDateRange.template">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="EmployeesPostBadRequest.template">
+    </None>
+    <None Include="Templates\EmployeesPost2.template">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    </None>
+    <None Include="Templates\EmployeesPostBadRequest.template">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="packages.config" />
-    <Content Include="Templates\System.template">
+    <None Include="Templates\System.template">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="TransunionPost3.template">
+    </None>
+    <None Include="Templates\TransunionPost3.template">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\James.ServiceStubs\James.ServiceStubs.csproj">
