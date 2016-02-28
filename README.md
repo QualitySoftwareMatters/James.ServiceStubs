@@ -51,8 +51,8 @@ The routes.json file will hold all of the configuration for the routes that you 
 [
   {
     "type": "Get",
-    "template": "/api/Sample/{id}",
-    "path": "Templates/Sample.template",
+    "path": "/api/Sample/{id}",
+    "template": "Templates/Sample.template",
     "delayInMilliseconds": [ 1000, 2000, 3000 ],
     "delayStrategy": "RoundRobin",
     "status": "OK"
@@ -98,8 +98,8 @@ For each route, there are a number of properties that you can configure.  If the
 | Property | Description | Default | Comments |
 | -------- | ----------- | ------- | -------- |
 | type     | The various request types:  Get, Post, Put, Delete | Get | |
-| template | The url template for matching requests to responses | http://localhost:[port]/ | |
-| path     | The path to the template that should be used for the response | n/a | |
+| path | The url path for matching requests to responses | http://localhost:[port]/ | |
+| template | The path to the template that should be used for the response | n/a | |
 | delayInMilliseconds | The delay that the framework should wait for returning a response | 0 | You can specify 1 without the array syntax or multiple as an array when specifying this value. | 
 | delayStrategy | The strategy that the framework should use for delaying the response | RoundRobin | |
 | status | The status code description that should be returned with the response | OK | |
@@ -112,7 +112,7 @@ The other strategy for delays is Random.  In that case, the framework will rando
 
 ### Templates
 
-If you want to add templates to the system, you can do that by adding them anywhere relative to the project.  As suggested by the installation, it would make sense to store them in the Templates folder off of the root of your project.  When you reference the path in the routes.json file, they should be relative to the root.
+If you want to add templates to the system, you can do that by adding them anywhere relative to the project.  As suggested by the installation, it would make sense to store them in the Templates folder off of the root of your project.  When you reference the template path in the routes.json file, they should be relative to the root.
 
 You will also need to make sure to set the Copy To Output to true for the given file.  You can do this by right-clicking on the file and selecting Properties and filling in this value in the Properties pane.
 
