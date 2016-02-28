@@ -98,7 +98,7 @@ For each route, there are a number of properties that you can configure.  If the
 | Property | Description | Default | Comments |
 | -------- | ----------- | ------- | -------- |
 | type     | The various request types:  Get, Post, Put, Delete | Get | |
-| path | The url path for matching requests to responses | '' = http://localhost:[port]/ | |
+| path | The url path for matching requests to responses | '' | the base path is http://localhost:[port]/ |
 | template | The path to the template that should be used for the response | n/a | |
 | delayInMilliseconds | The delay that the framework should wait for returning a response | 0 | You can specify 1 without the array syntax or multiple as an array when specifying this value. | 
 | delayStrategy | The strategy that the framework should use for delaying the response | RoundRobin | |
