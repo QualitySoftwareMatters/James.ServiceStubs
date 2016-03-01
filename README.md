@@ -87,9 +87,21 @@ The routes.json file holds all of the configuration for the routes that you want
 
 ```json
 [
-  { "template" : "path/to/template1.template" },
-  { "template" : "path/to/template2.template" },
-  { "template" : "path/to/template3.template" }
+  {
+    "type" : "Get",
+    "path" : "/url/to/path1",
+    "template" : "path/to/template1.template" 
+  },
+  { 
+    "type" : "Get",
+    "path" : "/url/to/path2",
+    "template" : "path/to/template2.template" 
+  },
+  { 
+    "type" : "Get",
+    "path" : "/url/to/path3",
+    "template" : "path/to/template3.template" 
+  }
 ]
 ```
 
