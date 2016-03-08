@@ -8,10 +8,12 @@ namespace James.ServiceStubs
 {
     public class NotFoundErrorHandler : IStatusCodeHandler
     {
+        private readonly ILogger _logger;
         private readonly IStatusCodeHandler _defaultStatusCodeHandler;
 
-        public NotFoundErrorHandler(IResponseNegotiator responseNegotiator)
+        public NotFoundErrorHandler(ILogger logger, IResponseNegotiator responseNegotiator)
         {
+            _logger = logger;
             _defaultStatusCodeHandler = new DefaultStatusCodeHandler(responseNegotiator);
         }
 
@@ -24,7 +26,7 @@ namespace James.ServiceStubs
         {
             if (context.Items.ContainsKey(ConfiguredModule.RouteResolvedKey) == false)
             {
-                Console.WriteLine($"FAILURE:  {context.ResolvedRoute.Description.Path}");
+                _logger.Info($"(FAILURE) {context.ResolvedRoute.Description.Path}");
             }
 
             _defaultStatusCodeHandler.Handle(statusCode, context);

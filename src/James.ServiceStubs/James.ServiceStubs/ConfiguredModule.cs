@@ -9,11 +9,13 @@ namespace James.ServiceStubs
 {
     public class ConfiguredModule : NancyModule
     {
+        private readonly ILogger _logger;
         private readonly ITemplateEngine _engine;
         public const string RouteResolvedKey = "RouteResolved";
 
-        public ConfiguredModule(IRouteProvider provider, ITemplateEngine engine)
+        public ConfiguredModule(ILogger logger, IRouteProvider provider, ITemplateEngine engine)
         {
+            _logger = logger;
             _engine = engine;
 
             var routes = provider.GetRoutes();
@@ -63,7 +65,7 @@ namespace James.ServiceStubs
 
         private Response GetResponse(Route route, NancyContext context)
         {
-            Console.WriteLine($"SUCCESS:  {Context.ResolvedRoute.Description.Path}");
+            _logger.Info($"(SUCCESS) {Context.ResolvedRoute.Description.Path}");
             context.Items.Add(RouteResolvedKey, true);
 
             var contentType = context.Request.Headers.Accept.FirstOrDefault();

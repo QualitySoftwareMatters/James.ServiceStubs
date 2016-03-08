@@ -13,8 +13,11 @@ namespace James.ServiceStubs
     public class ServiceStubsBootstrapper : DefaultNancyBootstrapper
     {
         protected override void ConfigureApplicationContainer(TinyIoCContainer container)
-        {
+        {   
             base.ConfigureApplicationContainer(container);
+
+            container.Register<ILogger, ConsoleLogger>();
+            container.Register<IRouteProvider>((c,p) => new FileRouteProvider(c.Resolve<ILogger>()));
             container.Register<ITemplateEngine, RazorTemplateEngine>().AsMultiInstance();
         }
 
