@@ -20,6 +20,7 @@ x86/
 bld/
 [Bb]in/
 [Oo]bj/
+[Tt]ools/
 
 # Visual Studio 2015 cache/options directory
 .vs/
@@ -144,6 +145,7 @@ publish/
 
 # NuGet Packages
 *.nupkg
+!servicestubs.*.nupkg
 # The packages folder can be ignored because of Package Restore
 **/packages/*
 # except build/, which is used as an MSBuild target.
