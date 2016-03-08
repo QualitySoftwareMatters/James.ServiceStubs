@@ -28,7 +28,7 @@ In performance/load testing scenarios, you might need to ensure that the respons
 
 Whatever the reason, James.ServiceStubs will allow you to host that service either in-process using self hosting by installing the Nuget package to your project or by downloading the James.ServiceStubs.zip from [here]() and running it from the command line.
 
-## Getting Started - Automated Integration Tests ##
+## Getting Started - Automated Integration Tests
 
 To get started, you will need to install the Nuget package to your current integration testing project.
 
@@ -80,6 +80,24 @@ using (var host = new ServiceStubsHost("http://localhost:1234"))
 ```
 
 Once you have the host started, you can open your browser and go to the configured route (```http://localhost:1234/api/Sample/1```) and see the response.
+
+## Getting Started - Performance/Manual Tests ##
+
+If you just want to host a service stub without using the Visual Studio IDE, there is a command-line version that you can use.  To install, make sure you have chocolatey installed.  (If you have questions about installing chocolatey, visit [their site](http://chocolatey.org) to get more info.)
+
+Once chocolatey is installed on your local machine, download the [latest package](https://github.com/QualitySoftwareMatters/James.ServiceStubs/blob/master/src/James.ServiceStubs/build/servicestubs.0.4.11.nupkg?raw=true) and run the following command from the same location:
+
+```
+>choco install servicestubs.0.4.11.nupkg
+```
+
+If everything was installed successfully, you should be able to run the following at the command line from any location:
+
+```
+>servicestubs
+```
+
+The host should start and say that it is listening on "http://localhost:1234" with a warning that you do not have a routes.config.  The host is listening, but you will not be able to return anything without the routes.config file and any referenced templates.  You can manually create one based on the existing one found [here](https://github.com/QualitySoftwareMatters/James.ServiceStubs/blob/master/src/James.ServiceStubs/James.ServiceStubs/routes.json).
 
 ## Route Configuration
 
