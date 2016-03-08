@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- Read this before publishing packages to chocolatey.org: https://github.com/chocolatey/chocolatey/wiki/CreatePackages -->
+    <id>servicestubs</id>
+    <title>Service Stubs</title>
+    <version>0.4.10</version>
+    <authors>Todd Meinershagen</authors>
+    <owners>Todd Meinershagen</owners>
+    <summary>A configurable, template-based http service stub host</summary>
+    <description>
+      ServiceStubs is a configurable, template-based http service stub host that you can use to test your .NET http client code in an automated fashion.  Some of the challenges this host can solve are:
+
+      * Dependent Service Inaccessibility
+      * Testing Sad Case Scenarios
+      * Performance Testing Isolation
+    </description>
+    <projectUrl>https://github.com/QualitySoftwareMatters/James.ServiceStubs</projectUrl>
+    <packageSourceUrl>https://github.com/QualitySoftwareMatters/James.ServiceStubs/tree/master/src/James.ServiceStubs/James.ServiceStubs.CommandLine</packageSourceUrl>
+    <projectSourceUrl>https://github.com/QualitySoftwareMatters/James.ServiceStubs</projectSourceUrl>
+    <docsUrl>https://github.com/QualitySoftwareMatters/James.ServiceStubs</docsUrl>
+    <!--<mailingListUrl></mailingListUrl>-->
+    <bugTrackerUrl>https://github.com/QualitySoftwareMatters/James.ServiceStubs/issues</bugTrackerUrl>
+    <tags>http service test testing stubs mocks fake</tags>
+    <copyright>Copyright 2016</copyright>
+    <licenseUrl>https://github.com/QualitySoftwareMatters/James.ServiceStubs/blob/master/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>https://avatars2.githubusercontent.com/u/12646135?v=3</iconUrl>
+    <!--<dependencies>
+      <dependency id="" version="__VERSION__" />
+      <dependency id="" />
+    </dependencies>-->
+    <!--<releaseNotes>__REPLACE_OR_REMOVE__MarkDown_Okay</releaseNotes>-->
+    <!--<provides></provides>-->
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

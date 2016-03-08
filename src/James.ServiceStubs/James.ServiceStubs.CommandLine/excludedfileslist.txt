@@ -1,0 +1,5 @@
+﻿
+.vshost
+routes.json
+excludedfileslist.txt
+\Templates\

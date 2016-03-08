@@ -19,8 +19,10 @@ namespace James.ServiceStubs.CommandLine
                 return CreateNewAppDomain();
             }
 
-            var options = new OptionSet();
-            options.Add("p|port=", (int v) => DefaultPort = v);
+            var options = new OptionSet
+            {
+                {"p|port=", (int v) => DefaultPort = v},
+            };
             options.Add("h|?|help", v => ShowHelp(options));
             options.Parse(Environment.GetCommandLineArgs());
 

@@ -60,9 +60,13 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="excludedfileslist.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <Content Include="routes.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="servicestubs.nuspec" />
     <None Include="Templates\Customer1.template">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -98,8 +102,15 @@
       <Name>James.ServiceStubs</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="tools\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <ProjectExtensions />
+  <PropertyGroup>
+    <PostBuildEvent>del /q $(ProjectDir)tools /s
+xcopy /exclude:excludedfileslist.txt $(TargetDir)* $(ProjectDir)tools /s /i</PostBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
