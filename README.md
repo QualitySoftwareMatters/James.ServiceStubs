@@ -4,13 +4,13 @@
 
 ## Overview
 
-James.ServiceStubs is a configurable template-based HTTP service stub host/generator that you can use to self-host service stubs for testing your .NET HTTP client code in an automated fashion.  Some of the challenges that this library can solve are:
+James.ServiceStubs is a configurable, template-based HTTP service stub host/generator that you can use to self-host service stubs for testing your .NET HTTP client code in an automated fashion.  Some of the challenges that this library can solve are:
 
-* Service Inaccessibility
-* Sad Case Scenarios
+* Dependent Service Inaccessibility
+* Testing Sad Case Scenarios
 * Performance Testing Isolation
 
-### Service Inaccessibility
+### Dependent Service Inaccessibility
 
 In many cases, the service that you want to test with will not be available during your development of the HTTP client code.  This could be due to many reasons.
 
@@ -18,7 +18,7 @@ If you practice TDD (test-driven development) or the group creating the client c
 
 In other cases, you might be working with a 3rd party that does not provide a pre-production version of their service, or you are working with an internal service that is not guaranteed to be up and running when you decide to run an automated test or demo your software.
 
-### Sad Case Scenarios
+### Testing Sad Case Scenarios
 
 Another challenge with testing your HTTP client code is validating how your code will behave in the case of bad responses such as a 400-BadRequest or a 500-InternalServerError.  These kinds of errors are sometimes hard to create manually or by sending the right data.  They can be intermittent, and yet, you need to make sure that your code will be reliable in these situations.
 
@@ -87,9 +87,21 @@ The routes.json file holds all of the configuration for the routes that you want
 
 ```json
 [
-  { //route },
-  { //route },
-  { //route }
+  {
+    "type" : "Get",
+    "path" : "/url/to/path1",
+    "template" : "path/to/template1.template" 
+  },
+  { 
+    "type" : "Get",
+    "path" : "/url/to/path2",
+    "template" : "path/to/template2.template" 
+  },
+  { 
+    "type" : "Get",
+    "path" : "/url/to/path3",
+    "template" : "path/to/template3.template" 
+  }
 ]
 ```
 
