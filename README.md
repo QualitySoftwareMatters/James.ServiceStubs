@@ -26,7 +26,7 @@ Another challenge with testing your HTTP client code is validating how your code
 
 In performance/load testing scenarios, you might need to ensure that the response from a given service does not add any response time to your testing, so that you can better understand the performance of the existing HTTP client code and whatever else it does.  If you are tied to real services, it is not possible to control this variable.
 
-Whatever the reason, James.ServiceStubs will allow you to host that service either in-process using self hosting by installing the Nuget package to your project or by downloading the James.ServiceStubs.zip from [here]() and running it from the command line.
+Whatever the reason, James.ServiceStubs will allow you to host that service either in-process using self hosting by installing the Nuget package to your project or by downloading the latest servicestubs.nupkg from [here](https://github.com/QualitySoftwareMatters/James.ServiceStubs/blob/master/src/James.ServiceStubs/build/servicestubs.0.4.12.nupkg?raw=true) and running it from the command line.
 
 ## Getting Started - Automated Integration Tests
 
@@ -85,10 +85,10 @@ Once you have the host started, you can open your browser and go to the configur
 
 If you just want to host a service stub without using the Visual Studio IDE, there is a command-line version that you can use.  To install, make sure you have chocolatey installed.  (If you have questions about installing chocolatey, visit [their site](http://chocolatey.org) to get more info.)
 
-Once chocolatey is installed on your local machine, download the [latest package](https://github.com/QualitySoftwareMatters/James.ServiceStubs/blob/master/src/James.ServiceStubs/build/servicestubs.0.4.11.nupkg?raw=true) and run the following command from the same location:
+Once chocolatey is installed on your local machine, download the [latest package](https://github.com/QualitySoftwareMatters/James.ServiceStubs/blob/master/src/James.ServiceStubs/build/servicestubs.0.4.12.nupkg?raw=true) and run the following command from the same location:
 
 ```
->choco install servicestubs.0.4.11.nupkg
+>choco install servicestubs.0.4.12.nupkg
 ```
 
 If everything was installed successfully, you should be able to run the following at the command line from any location:
