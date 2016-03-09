@@ -4,8 +4,6 @@ using System.Security;
 using System.Security.Permissions;
 using System.Security.Policy;
 
-using James.ServiceStubs.CommandLine.Mono.Options;
-
 namespace James.ServiceStubs.CommandLine
 {
     class Program
@@ -19,36 +17,10 @@ namespace James.ServiceStubs.CommandLine
                 return CreateNewAppDomain();
             }
 
-            var options = new OptionSet
-            {
-                {"p|port=", (int v) => DefaultPort = v},
-            };
-            options.Add("h|?|help", v => ShowHelp(options));
-            options.Parse(Environment.GetCommandLineArgs());
-
-            var uri = new Uri($"http://localhost:{DefaultPort}");
-            using (var host = new ServiceStubsHost(uri))
-            {
-                host.Start();
-
-                Console.WriteLine($"Listening for requests at {uri.OriginalString}");
-                Console.WriteLine("Hit ENTER to quit...");
-                Console.WriteLine("");
-                Console.ReadLine();
-            }
+            var client = new Client();
+            client.Run();
 
             return 0;
-        }
-
-        static void ShowHelp(OptionSet p)
-        {
-            Console.WriteLine($"Usage: {Assembly.GetCallingAssembly().GetName().Name} [OPTIONS]+");
-            Console.WriteLine("Host a configurable set of stubbed service endpoints.");
-            Console.WriteLine($"If no port is specified, a generic port ({DefaultPort}) is used.");
-            Console.WriteLine();
-            Console.WriteLine("Options:");
-            p.WriteOptionDescriptions(Console.Out);
-            Console.WriteLine();
         }
 
         private static int CreateNewAppDomain()

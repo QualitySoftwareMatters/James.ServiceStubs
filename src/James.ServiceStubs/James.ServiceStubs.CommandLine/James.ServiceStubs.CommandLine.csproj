@@ -36,6 +36,10 @@
     <StartupObject>James.ServiceStubs.CommandLine.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="James.ServiceStubs, Version=0.4.11.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\James.ServiceStubs.0.4.11.0\lib\net452\James.ServiceStubs.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Nancy, Version=1.4.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Nancy.1.4.1\lib\net40\Nancy.dll</HintPath>
       <Private>True</Private>
@@ -44,8 +48,20 @@
       <HintPath>..\packages\Nancy.Hosting.Self.1.4.1\lib\net40\Nancy.Hosting.Self.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.8.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="RazorEngine, Version=3.7.7.0, Culture=neutral, PublicKeyToken=9ee697374c7e744a, processorArchitecture=MSIL">
+      <HintPath>..\packages\RazorEngine.3.7.7\lib\net45\RazorEngine.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.0.0\lib\net45\System.Web.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -54,6 +70,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Client.cs" />
+    <Compile Include="CustomServiceStubsBootstrapper.cs" />
     <Compile Include="Mono.Options\Options.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -63,9 +81,9 @@
     <None Include="excludedfileslist.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <Content Include="routes.json">
+    <None Include="routes.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    </None>
     <None Include="servicestubs.nuspec" />
     <None Include="Templates\Customer1.template">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -95,12 +113,6 @@
     <None Include="Templates\TransunionPost3.template">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\James.ServiceStubs\James.ServiceStubs.csproj">
-      <Project>{5d4acdf7-69c7-41f7-b893-e14d026b45af}</Project>
-      <Name>James.ServiceStubs</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="tools\" />

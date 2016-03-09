@@ -9,16 +9,19 @@ namespace James.ServiceStubs
     public class FileRouteProvider : IRouteProvider
     {
         private readonly ILogger _logger;
+        private readonly IFileProvider _fileProvider;
         private readonly string _routeConfigPath;
+        public const string RoutesFileDoesNotExistMessage = "routes.json file does not exist.No routes will be loaded.";
          
-        public FileRouteProvider(ILogger logger)
-            : this(logger, Path.Combine(Environment.CurrentDirectory, "routes.json"))
+        public FileRouteProvider(ILogger logger, IFileProvider fileProvider)
+            : this(logger, fileProvider, Environment.CurrentDirectory)
         { }
 
-        public FileRouteProvider(ILogger logger, string path)
+        public FileRouteProvider(ILogger logger, IFileProvider fileProvider, string filePath)
         {
             _logger = logger;
-            _routeConfigPath = path;
+            _fileProvider = fileProvider;
+            _routeConfigPath = Path.Combine(filePath, "routes.json");
         }
 
         private List<Route> _cachedRoutes;
@@ -27,14 +30,14 @@ namespace James.ServiceStubs
         {
             if (_cachedRoutes == null)
             {
-                if (File.Exists(_routeConfigPath))
+                if (_fileProvider.Exists(_routeConfigPath))
                 {
-                    var json = File.ReadAllText(_routeConfigPath);
+                    var json = _fileProvider.ReadAllText(_routeConfigPath);
                     _cachedRoutes = JsonConvert.DeserializeObject<List<Route>>(json);
                 }
                 else
                 {
-                    _logger.Warn("routes.json file does not exist.  No routes will be loaded.");
+                    _logger.Warn(RoutesFileDoesNotExistMessage);
                 }
             }
 

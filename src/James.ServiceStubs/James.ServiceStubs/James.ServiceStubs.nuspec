@@ -12,6 +12,8 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>$description$</description>
     <releaseNotes>
+      0.4.12 Added the ability to override the path for the routes and template files.  This is leveraged by the command line app.
+      0.4.11 Made the logging configurable via tiny ioc.
       0.4.10 Modified the Sample.template to use the correct syntax for rendering the id data.
       0.4.9 Reversed the route property names path and template to better align their meaning.
       0.4.8 Additional configuration.

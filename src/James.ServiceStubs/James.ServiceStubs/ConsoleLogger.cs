@@ -24,6 +24,16 @@ namespace James.ServiceStubs
             Warn(string.Format(message, args));
         }
 
+        public void Error(string message)
+        {
+            WriteLine("error", message);
+        }
+
+        public void Error(string message, params object[] args)
+        {
+            Error(string.Format(message, args));
+        }
+
         private void WriteLine(string logLevel, string message)
         {
             Console.Out.WriteLine($"{logLevel.ToUpper()}:  {message}");
