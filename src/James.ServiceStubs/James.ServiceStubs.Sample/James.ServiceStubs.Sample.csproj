@@ -38,8 +38,8 @@
       <HintPath>..\packages\FluentAssertions.4.2.2\lib\net45\FluentAssertions.Core.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="James.ServiceStubs, Version=0.4.11.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\James.ServiceStubs.0.4.11.0\lib\net452\James.ServiceStubs.dll</HintPath>
+    <Reference Include="James.ServiceStubs, Version=0.4.12.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\James.ServiceStubs.0.4.12.0\lib\net452\James.ServiceStubs.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Nancy, Version=1.4.1.0, Culture=neutral, processorArchitecture=MSIL">

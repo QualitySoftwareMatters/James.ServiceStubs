@@ -15,8 +15,8 @@ namespace James.ServiceStubs.CommandLine
         {
             base.ConfigureApplicationContainer(container);
 
-            container.Register<IRouteProvider>((c, p) => new FileRouteProvider(c.Resolve<ILogger>(), _filePath));
-            //container.Register<ITemplateProvider>((c, p) => new FileTemplateProvider(c.Resolve<ILogger>(), _filePath));
+            container.Register<IRouteProvider>((c, p) => new FileRouteProvider(c.Resolve<ILogger>(), c.Resolve<IFileProvider>(), _filePath));
+            container.Register<ITemplateProvider>((c, p) => new FileTemplateProvider(c.Resolve<ILogger>(), c.Resolve<IFileProvider>(), _filePath));
         }
     }
 }

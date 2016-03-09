@@ -5,7 +5,7 @@
     <!-- Read this before publishing packages to chocolatey.org: https://github.com/chocolatey/chocolatey/wiki/CreatePackages -->
     <id>servicestubs</id>
     <title>Service Stubs</title>
-    <version>0.4.11</version>
+    <version>0.4.12</version>
     <authors>Todd Meinershagen</authors>
     <owners>Todd Meinershagen</owners>
     <summary>A configurable, template-based http service stub host</summary>
