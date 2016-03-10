@@ -26,7 +26,7 @@ Another challenge with testing your HTTP client code is validating how your code
 
 In performance/load testing scenarios, you might need to ensure that the response from a given service does not add any response time to your testing, so that you can better understand the performance of the existing HTTP client code and whatever else it does.  If you are tied to real services, it is not possible to control this variable.
 
-Whatever the reason, James.ServiceStubs will allow you to host that service either in-process using self hosting by installing the Nuget package to your project or by downloading the latest servicestubs.nupkg from [here](https://github.com/QualitySoftwareMatters/James.ServiceStubs/blob/master/src/James.ServiceStubs/build/servicestubs.0.4.12.nupkg?raw=true) and running it from the command line.
+Whatever the reason, James.ServiceStubs will allow you to host that service either in-process using self hosting by installing the Nuget package to your project or by downloading the latest servicestubs.{version}.nupkg from [here](https://github.com/QualitySoftwareMatters/James.ServiceStubs/blob/master/src/James.ServiceStubs/build/servicestubs.0.4.12.nupkg?raw=true) and running it from the command line.
 
 ## Getting Started - Automated Integration Tests
 
