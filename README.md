@@ -4,7 +4,7 @@
 
 ## Table of Contents
 
-* [Overview](https://github.com/QualitySoftwareMatters/James.ServiceStubs/blob/master/README.md#overview)
+* [Overview](https://github.com/qualitysoftwarematters/james.servicestubs#overview)
 * [Getting Started - Integration Tests](https://github.com/qualitysoftwarematters/james.servicestubs#getting-started---automated-integration-tests)
 * [Getting Started - Performance Tests](https://github.com/qualitysoftwarematters/james.servicestubs#getting-started---performancemanual-tests)
 * [Route Configuration](https://github.com/qualitysoftwarematters/james.servicestubs#route-configuration)
