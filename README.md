@@ -107,7 +107,7 @@ You can manually create one based on the existing one found [here](https://githu
 
 This will drop both the routes.config and the Templates\Sample.template files in the current directory.
 
-If you have other questions about how to use the tool, you can run the following command:
+If you have other questions about how to use the tool, you can run the following command to show help.
 
 ```
 >servicestubs --help
