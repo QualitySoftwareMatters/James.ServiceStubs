@@ -2,6 +2,15 @@
 
 [![NuGet version (James.ServiceStubs)](https://badge.fury.io/nu/James.ServiceStubs.svg)](https://www.nuget.org/packages/James.ServiceStubs/)
 
+## Table of Contents
+
+* [Overview](https://github.com/qualitysoftwarematters/james.servicestubs#overview)
+* [Getting Started - Integration Tests](https://github.com/qualitysoftwarematters/james.servicestubs#getting-started---automated-integration-tests)
+* [Getting Started - Performance Tests](https://github.com/qualitysoftwarematters/james.servicestubs#getting-started---performancemanual-tests)
+* [Route Configuration](https://github.com/qualitysoftwarematters/james.servicestubs#route-configuration)
+* [Delays](https://github.com/qualitysoftwarematters/james.servicestubs#delays)
+* [Templates](https://github.com/qualitysoftwarematters/james.servicestubs#templates)
+
 ## Overview
 
 James.ServiceStubs is a configurable, template-based HTTP service stub host/generator that you can use to self-host service stubs for testing your .NET HTTP client code in an automated fashion.  Some of the challenges that this library can solve are:
@@ -26,7 +35,7 @@ Another challenge with testing your HTTP client code is validating how your code
 
 In performance/load testing scenarios, you might need to ensure that the response from a given service does not add any response time to your testing, so that you can better understand the performance of the existing HTTP client code and whatever else it does.  If you are tied to real services, it is not possible to control this variable.
 
-Whatever the reason, James.ServiceStubs will allow you to host that service either in-process using self hosting by installing the Nuget package to your project or by downloading the latest servicestubs.{version}.nupkg from [here](https://github.com/QualitySoftwareMatters/James.ServiceStubs/blob/master/src/James.ServiceStubs/build/servicestubs.0.4.12.nupkg?raw=true) and running it from the command line.
+Whatever the reason, James.ServiceStubs will allow you to host that service either in-process using self hosting by installing the Nuget package to your project or by downloading the latest servicestubs.latest.nupkg from [here](https://github.com/QualitySoftwareMatters/James.ServiceStubs/blob/master/src/James.ServiceStubs/build/servicestubs.latest.nupkg?raw=true) and running it from the command line.
 
 ## Getting Started - Automated Integration Tests
 
@@ -85,10 +94,10 @@ Once you have the host started, you can open your browser and go to the configur
 
 If you just want to host a service stub without using the Visual Studio IDE, there is a command-line version that you can use.  To install, make sure you have chocolatey installed.  (If you have questions about installing chocolatey, visit [their site](http://chocolatey.org) to get more info.)
 
-Once chocolatey is installed on your local machine, download the [latest package](https://github.com/QualitySoftwareMatters/James.ServiceStubs/blob/master/src/James.ServiceStubs/build/servicestubs.0.4.12.nupkg?raw=true) and run the following command from the same location:
+Once chocolatey is installed on your local machine, download the [latest package](https://github.com/QualitySoftwareMatters/James.ServiceStubs/blob/master/src/James.ServiceStubs/build/servicestubs.latest.nupkg?raw=true) and run the following command from the same location:
 
 ```
->choco install servicestubs.0.4.12.nupkg
+>choco install servicestubs.latest.nupkg
 ```
 
 If everything was installed successfully, you should be able to run the following at the command line from any location:
@@ -97,7 +106,21 @@ If everything was installed successfully, you should be able to run the followin
 >servicestubs
 ```
 
-The host should start and say that it is listening on "http://localhost:1234" with a warning that you do not have a routes.config.  The host is listening, but you will not be able to return anything without the routes.config file and any referenced templates.  You can manually create one based on the existing one found [here](https://github.com/QualitySoftwareMatters/James.ServiceStubs/blob/master/src/James.ServiceStubs/James.ServiceStubs/routes.json).
+The host should start and say that it is listening on "http://localhost:1234" with a warning that you do not have a routes.config.  The host is listening, but you will not be able to return anything without the routes.config file and any referenced templates.  
+
+You can manually create one based on the existing one found [here](https://github.com/QualitySoftwareMatters/James.ServiceStubs/blob/master/src/James.ServiceStubs/James.ServiceStubs/routes.json).  Or, you can call the following command to initialize a configuration file and a sample template.
+
+```
+>servicestubs --init
+```
+
+This will drop both the routes.config and the Templates\Sample.template files in the current directory.
+
+If you have other questions about how to use the tool, you can run the following command to show help.
+
+```
+>servicestubs --help
+```
 
 ## Route Configuration
 
