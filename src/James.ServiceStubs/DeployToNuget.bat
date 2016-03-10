@@ -6,11 +6,13 @@ nuget.exe update -self
 
 REM Delete Any Artifacts
 REM ====================
-if exist build (
-	rd /s/q build
+IF EXIST build (
+	cd build
+	del /f /q James.ServiceStubs.*.nupkg
+	cd ..
+) ELSE (
+	mkdir build
 )
-
-mkdir build
 
 REM Requests the API Key
 REM ====================
