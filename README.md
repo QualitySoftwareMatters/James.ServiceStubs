@@ -88,7 +88,7 @@ If you just want to host a service stub without using the Visual Studio IDE, the
 Once chocolatey is installed on your local machine, download the [latest package](https://github.com/QualitySoftwareMatters/James.ServiceStubs/blob/master/src/James.ServiceStubs/build/servicestubs.latest.nupkg?raw=true) and run the following command from the same location:
 
 ```
->choco install servicestubs.0.4.12.nupkg
+>choco install servicestubs.latest.nupkg
 ```
 
 If everything was installed successfully, you should be able to run the following at the command line from any location:
