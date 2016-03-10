@@ -97,7 +97,21 @@ If everything was installed successfully, you should be able to run the followin
 >servicestubs
 ```
 
-The host should start and say that it is listening on "http://localhost:1234" with a warning that you do not have a routes.config.  The host is listening, but you will not be able to return anything without the routes.config file and any referenced templates.  You can manually create one based on the existing one found [here](https://github.com/QualitySoftwareMatters/James.ServiceStubs/blob/master/src/James.ServiceStubs/James.ServiceStubs/routes.json).
+The host should start and say that it is listening on "http://localhost:1234" with a warning that you do not have a routes.config.  The host is listening, but you will not be able to return anything without the routes.config file and any referenced templates.  
+
+You can manually create one based on the existing one found [here](https://github.com/QualitySoftwareMatters/James.ServiceStubs/blob/master/src/James.ServiceStubs/James.ServiceStubs/routes.json).  Or, you can call the following command to initialize a configuration file and a sample template.
+
+```
+>servicestubs --init
+```
+
+This will drop both the routes.config and the Templates\Sample.template files in the current directory.
+
+If you have other questions about how to use the tool, you can run the following command:
+
+```
+>servicestubs --help
+```
 
 ## Route Configuration
 
