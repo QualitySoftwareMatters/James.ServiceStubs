@@ -2,6 +2,15 @@
 
 [![NuGet version (James.ServiceStubs)](https://badge.fury.io/nu/James.ServiceStubs.svg)](https://www.nuget.org/packages/James.ServiceStubs/)
 
+## Table of Contents
+
+* [Overview](https://github.com/QualitySoftwareMatters/James.ServiceStubs/blob/master/README.md#overview)
+* [Getting Started - Integration Tests](https://github.com/qualitysoftwarematters/james.servicestubs#getting-started---automated-integration-tests)
+* [Getting Started - Performance Tests](https://github.com/qualitysoftwarematters/james.servicestubs#getting-started---performancemanual-tests)
+* [Route Configuration](https://github.com/qualitysoftwarematters/james.servicestubs#route-configuration)
+* [Delays](https://github.com/qualitysoftwarematters/james.servicestubs#delays)
+* [Templates](https://github.com/qualitysoftwarematters/james.servicestubs#templates)
+
 ## Overview
 
 James.ServiceStubs is a configurable, template-based HTTP service stub host/generator that you can use to self-host service stubs for testing your .NET HTTP client code in an automated fashion.  Some of the challenges that this library can solve are:
