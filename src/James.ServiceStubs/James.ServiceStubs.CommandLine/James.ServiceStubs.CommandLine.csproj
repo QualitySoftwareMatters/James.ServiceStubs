@@ -7,7 +7,7 @@
     <ProjectGuid>{8B64C0E1-38EC-4E37-B23F-83F77E816C3F}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>James.ServiceStubs.CommandLine</RootNamespace>
+    <RootNamespace>ServiceStubs</RootNamespace>
     <AssemblyName>ServiceStubs</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>James.ServiceStubs.CommandLine.Program</StartupObject>
+    <StartupObject>ServiceStubs.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="James.ServiceStubs, Version=0.4.12.0, Culture=neutral, processorArchitecture=MSIL">
@@ -70,14 +70,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Client.cs" />
+    <Compile Include="Commands\EmbeddedFileProvider.cs" />
+    <Compile Include="Commands\ICommand.cs" />
+    <Compile Include="Commands\InitCommand.cs" />
+    <Compile Include="Commands\NewAppDomainCommand.cs" />
+    <Compile Include="Commands\ShowHelpCommand.cs" />
+    <Compile Include="Commands\StartCommand.cs" />
     <Compile Include="CustomServiceStubsBootstrapper.cs" />
+    <Compile Include="Commands\FailureCommand.cs" />
     <Compile Include="Mono.Options\Options.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <EmbeddedResource Include="Commands\InitContent\routes.json" />
+    <EmbeddedResource Include="Commands\InitContent\Sample.template" />
     <None Include="excludedfileslist.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

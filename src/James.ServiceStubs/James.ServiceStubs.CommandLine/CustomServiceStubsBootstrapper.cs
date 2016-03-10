@@ -1,6 +1,8 @@
+using James.ServiceStubs;
+
 using Nancy.TinyIoc;
 
-namespace James.ServiceStubs.CommandLine
+namespace ServiceStubs
 {
     public class CustomServiceStubsBootstrapper : ServiceStubsBootstrapper
     {

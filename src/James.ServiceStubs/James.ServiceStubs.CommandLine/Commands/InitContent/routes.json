@@ -1,0 +1,10 @@
+﻿[
+    {
+    "type": "Get",
+    "path": "/api/Sample/{id}",
+    "template": "Templates/Sample.template",
+    "delayInMilliseconds": [ 1000, 2000, 3000 ],
+    "delayStrategy": "RoundRobin",
+    "status": "OK"
+  }
+]

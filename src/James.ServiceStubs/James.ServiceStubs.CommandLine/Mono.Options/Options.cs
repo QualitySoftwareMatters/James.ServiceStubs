@@ -149,7 +149,7 @@ using NDesk.Options;
 #if NDESK_OPTIONS
 namespace NDesk.Options
 #else
-namespace James.ServiceStubs.CommandLine.Mono.Options
+namespace ServiceStubs.Mono.Options
 #endif
 {
 	static class StringCoda {
