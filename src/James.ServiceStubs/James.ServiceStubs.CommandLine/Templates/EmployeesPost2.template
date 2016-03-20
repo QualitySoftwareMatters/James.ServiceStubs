@@ -1,6 +1,0 @@
-﻿{
-  "id": @Model.Body.Id,
-  "firstName": "@Model.Body.FirstName",
-  "lastName": "@Model.Body.LastName",
-  "address": "@Model.Body.Address.Line1, @Model.Body.Address.City, @Model.Body.Address.State  @Model.Body.Address.ZipCode"
-}

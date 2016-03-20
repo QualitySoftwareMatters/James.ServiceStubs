@@ -11,6 +11,18 @@
     "template": "Templates/EligibilityPayerDateRange.template",
     "delayInMilliseconds": 1000,
     "delayStrategy": "RoundRobin",
-    "status":  "BadRequest"
+    "status": "BadRequest"
+  },
+  {
+    "type": "Post",
+    "path": "/api/People/xml",
+    "template": "Templates/PersonPost.xml",
+    "status": "Ok"
+  },
+    {
+    "type": "Post",
+    "path": "/api/People/json",
+    "template": "Templates/PersonPost.json",
+    "status": "Ok"
   }
 ]

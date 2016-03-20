@@ -1,0 +1,5 @@
+﻿{
+  "firstName": "@Model.Body.FirstName",
+  "lastName": "@Model.Body.LastName",
+  "age": "@(DateTime.Now.Year - @Model.Body.Birthdate.Year)"
+}

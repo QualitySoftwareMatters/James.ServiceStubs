@@ -36,5 +36,7 @@ namespace James.ServiceStubs
                 });
             }
         }
+
+        //protected override IEnumerable<Type> ModelBinders => new[] { typeof(DynamicModelBinder) };
     }
 }

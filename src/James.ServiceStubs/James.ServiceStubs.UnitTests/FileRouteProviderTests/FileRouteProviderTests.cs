@@ -21,7 +21,7 @@ namespace James.ServiceStubs.UnitTests.FileRouteProviderTests
 
             var routes = provider.GetRoutes();
 
-            routes.Count.Should().Be(2);
+            routes.Count.Should().Be(4);
         }
 
         [Test]

@@ -65,6 +65,7 @@
   <ItemGroup>
     <Compile Include="ConfiguredModule.cs" />
     <Compile Include="ConsoleLogger.cs" />
+    <Compile Include="DynamicModelBinder.cs" />
     <Compile Include="FileProvider.cs" />
     <Compile Include="IFileProvider.cs" />
     <Compile Include="ILogger.cs" />
