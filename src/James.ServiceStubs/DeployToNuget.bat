@@ -29,5 +29,5 @@ nuget.exe pack -Build -OutputDirectory build %package% -Prop Configuration=Relea
 REM Push to Nuget 
 REM =============
 cd build
-nuget.exe push *.nupkg
+nuget.exe push James.ServiceStubs.*.nupkg
 cd ..

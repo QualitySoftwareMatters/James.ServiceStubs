@@ -1,21 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.IO;
 using System.Net.Http;
 using System.Net.Http.Formatting;
 using System.Net.Http.Headers;
-using System.Runtime.Serialization;
-using System.Xml;
 
 using FluentAssertions;
 
-using Nancy.Hosting.Self;
-
-using Newtonsoft.Json;
-
 using NUnit.Framework;
-
-using Polenter.Serialization;
 
 namespace James.ServiceStubs.UnitTests
 {
