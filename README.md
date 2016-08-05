@@ -1,6 +1,6 @@
 # James.ServiceStubs
 
-[![NuGet version (James.ServiceStubs)](https://img.shields.io/nuget/v/James.ServiceStubs.svg?style=flat)](https://www.nuget.org/packages/James.ServiceStubs/)
+[![NuGet version (James.ServiceStubs)](https://badge.fury.io/nu/James.ServiceStubs.svg)](https://badge.fury.io/nu/James.ServiceStubs)
 
 ## Table of Contents
 
