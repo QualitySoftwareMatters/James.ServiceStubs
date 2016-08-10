@@ -45,7 +45,7 @@ To get started, you will need to install the Nuget package to your current integ
 PM> install-package James.ServiceStubs
 ```
 
-This will not only install the various dependent libraries that James.ServiceStubs requires, but it will also set your project up with the routing configuration and a sample template file.  Below is what your project sturcture will look like after the install:
+This will not only install the various dependent libraries that James.ServiceStubs requires, but it will also set your project up with the routing configuration and a sample template file.  Below is what your project structure will look like after the install:
 
 ```
 Project
