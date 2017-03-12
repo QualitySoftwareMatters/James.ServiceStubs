@@ -1,0 +1,8 @@
+version: 1.0.{build}
+before_build:
+- cmd: >-
+    cd src/James.ServiceStubs
+
+    nuget restore
+build:
+  verbosity: minimal
