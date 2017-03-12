@@ -1,6 +1,7 @@
 # James.ServiceStubs
 
 [![NuGet version (James.ServiceStubs)](https://badge.fury.io/nu/James.ServiceStubs.svg)](https://badge.fury.io/nu/James.ServiceStubs)
+[![AppVeyor](https://img.shields.io/appveyor/ci/toddmeinershagen/James-ServiceStubs/master.svg)](https://ci.appveyor.com/project/toddmeinershagenJames-ServiceStubs/branch/master)
 
 ## Table of Contents
 
