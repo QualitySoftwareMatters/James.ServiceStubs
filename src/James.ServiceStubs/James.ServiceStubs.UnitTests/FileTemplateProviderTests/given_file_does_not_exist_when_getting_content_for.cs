@@ -23,7 +23,7 @@ namespace James.ServiceStubs.UnitTests.FileTemplateProviderTests
             var fileProvider = Substitute.For<IFileProvider>();
             var provider = new FileTemplateProvider(_logger, fileProvider);
 
-            fileProvider.Exists(Path.Combine(Environment.CurrentDirectory, TemplateKey)).Returns(false);
+            fileProvider.Exists(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, TemplateKey)).Returns(false);
 
             _contents = provider.GetContentsFor(TemplateKey, null);
         }

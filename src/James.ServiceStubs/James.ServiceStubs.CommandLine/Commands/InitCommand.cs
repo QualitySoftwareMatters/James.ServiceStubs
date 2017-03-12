@@ -31,7 +31,7 @@ namespace ServiceStubs.Commands
         {
             var routesContent = new EmbeddedFileProvider().GetContentsForFile("Commands.InitContent.routes.json");
             const string fileName = "routes.json";
-            var routesFilePath = Path.Combine(Environment.CurrentDirectory, fileName);
+            var routesFilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, fileName);
 
             if (_fileProvider.Exists(routesFilePath))
             {
@@ -50,7 +50,7 @@ namespace ServiceStubs.Commands
             var folder = "Templates";
             var fileName = "Sample.template";
 
-            var folderPath = Path.Combine(Environment.CurrentDirectory, folder);
+            var folderPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, folder);
             var templatePath = Path.Combine(folderPath, fileName);
 
             if (!_directoryProvider.Exists(folderPath))

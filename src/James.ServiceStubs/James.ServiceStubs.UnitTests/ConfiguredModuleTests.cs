@@ -4,7 +4,7 @@ using System.Net.Http.Formatting;
 using System.Net.Http.Headers;
 
 using FluentAssertions;
-
+using Nancy;
 using NUnit.Framework;
 
 namespace James.ServiceStubs.UnitTests
@@ -18,6 +18,7 @@ namespace James.ServiceStubs.UnitTests
         public void SetUp()
         {
             _host = new ServiceStubsHost("http://localhost:1234");
+            StaticConfiguration.DisableErrorTraces = false;
             _host.Start();
         }
 

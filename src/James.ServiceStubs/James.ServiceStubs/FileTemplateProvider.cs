@@ -19,7 +19,7 @@ namespace James.ServiceStubs
         }
 
         public FileTemplateProvider(ILogger logger, IFileProvider fileProvider)
-            : this(logger, fileProvider, Environment.CurrentDirectory)
+            : this(logger, fileProvider, AppDomain.CurrentDomain.BaseDirectory)
         {
         }
 

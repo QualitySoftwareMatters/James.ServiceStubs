@@ -24,7 +24,7 @@ namespace James.ServiceStubs.UnitTests.FileTemplateProviderTests
             const string templateKey = "myTemplate";
             const string expectedContent = "This is the expected content.";
 
-            var filePath = Path.Combine(Environment.CurrentDirectory, templateKey);
+            var filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, templateKey);
             fileProvider.Exists(filePath).Returns(true);
             fileProvider.ReadAllText(filePath).Returns(expectedContent);
 

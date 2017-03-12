@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.IO;
 
 using FluentAssertions;
-
+using Nancy.Routing;
 using NSubstitute;
 
 using NUnit.Framework;
+using NUnit.Framework.Internal;
 
 namespace James.ServiceStubs.UnitTests.FileRouteProviderTests
 {
@@ -18,7 +19,7 @@ namespace James.ServiceStubs.UnitTests.FileRouteProviderTests
         [OneTimeSetUp]
         public void SetUp()
         {
-            var customFilePath = Path.Combine(Environment.CurrentDirectory, "hidden");
+            var customFilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "hidden");
             _logger = Substitute.For<ILogger>();
             var fileProvider = Substitute.For<IFileProvider>();
             var provider = new FileRouteProvider(_logger, fileProvider, customFilePath);
