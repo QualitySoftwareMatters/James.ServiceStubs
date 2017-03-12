@@ -37,7 +37,7 @@ namespace James.ServiceStubs.UnitTests
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/xml"));
 
                 var person = new Person {FirstName = "Todd", LastName = "Meinershagen", Birthdate = 21.January(1970)};
-                var result = client.PostAsync("api/People/xml", person, new XmlMediaTypeFormatter()).Result;
+                var result = client.PostAsXmlAsync("api/People/xml", person).Result;
                 var content = result.Content.ReadAsStringAsync().Result;
                 var age = DateTime.Now.Year - person.Birthdate.Year;
 
@@ -62,7 +62,7 @@ namespace James.ServiceStubs.UnitTests
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
                 var person = new Person {FirstName = "Todd", LastName = "Meinershagen", Birthdate = 21.January(1970)};
-                var result = client.PostAsync("api/People/json", person, new JsonMediaTypeFormatter()).Result;
+                var result = client.PostAsJsonAsync("api/People/json", person).Result;
                 var content = result.Content.ReadAsStringAsync().Result;
                 var age = DateTime.Now.Year - person.Birthdate.Year;
 

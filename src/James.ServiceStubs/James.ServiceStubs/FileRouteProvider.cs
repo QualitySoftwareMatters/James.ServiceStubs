@@ -14,7 +14,7 @@ namespace James.ServiceStubs
         public const string RoutesFileDoesNotExistMessage = "routes.json file does not exist.No routes will be loaded.";
          
         public FileRouteProvider(ILogger logger, IFileProvider fileProvider)
-            : this(logger, fileProvider, Environment.CurrentDirectory)
+            : this(logger, fileProvider, AppDomain.CurrentDomain.BaseDirectory)
         { }
 
         public FileRouteProvider(ILogger logger, IFileProvider fileProvider, string filePath)

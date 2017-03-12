@@ -12,6 +12,7 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>$description$</description>
     <releaseNotes>
+      0.4.14 Fixed a bug in the FileRouteProvider that depends on the executing directory and Environment.CurrentDirectory is not guaranteed to give the proper answer.
       0.4.13 Added the ability to post xml content and be able to respond with properties from the request body.
       0.4.12 Added the ability to override the path for the routes and template files.  This is leveraged by the command line app.
       0.4.11 Made the logging configurable via tiny ioc.

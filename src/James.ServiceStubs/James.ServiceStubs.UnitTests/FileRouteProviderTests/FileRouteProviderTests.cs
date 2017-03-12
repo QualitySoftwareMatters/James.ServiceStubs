@@ -1,6 +1,6 @@
 ﻿using System;
 using System.IO;
-
+using System.Reflection;
 using FluentAssertions;
 
 using NSubstitute;
@@ -27,7 +27,7 @@ namespace James.ServiceStubs.UnitTests.FileRouteProviderTests
         [Test]
         public void given_routes_file_exists_and_custom_file_path_when_getting_routes_should_return_routes()
         {
-            var customFilePath = Path.Combine(Environment.CurrentDirectory, "CustomFilePath");
+            var customFilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "CustomFilePath");
             var logger = Substitute.For<ILogger>();
             var fileProvider = new FileProvider();
             var provider = new FileRouteProvider(logger, fileProvider, customFilePath);
